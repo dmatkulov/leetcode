@@ -3,7 +3,7 @@ const memoize = (fn) => {
     const cashes = {};
 
     return (...args) => {
-        const argKeys = JSON.stringify(...args);
+        const argKeys = args.toString();
         console.log('argKey: ', argKeys);
         console.log('arguments ', ...args)
         console.log('cashes', cashes)
